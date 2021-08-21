@@ -1,0 +1,40 @@
+package com.amdocs.training.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.amdocs.training.dao.UserDAO;
+import com.amdocs.training.dao.impl.UserDAOImpl;
+import com.amdocs.training.model.User;
+
+@WebServlet("/register")
+public class RegistrationController extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+
+		int id = Integer.parseInt(request.getParameter("id"));
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		int age = Integer.parseInt(request.getParameter("age"));
+		long phone = Long.parseLong(request.getParameter("phone"));
+		
+		UserDAO dao = new UserDAOImpl();
+		User user = new User(id, name, address, age, phone);
+		
+		boolean status = dao.saveUser(user);
+		
+		if(status)
+			out.println("User Saved Successfully");
+		else
+			out.println("Try Again");
+	}
+}

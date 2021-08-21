@@ -3,6 +3,7 @@
 	<name>elearning-frontend</name>
 	<comment></comment>
 	<projects>
+		<project>sample-soap-app</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

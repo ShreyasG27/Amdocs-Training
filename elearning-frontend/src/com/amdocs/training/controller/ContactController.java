@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.amdocs.training.dao.ContactDAO;
-import com.amdocs.training.dao.impl.ContactDAOImpl;
-import com.amdocs.training.model.Contact;
+import com.amdocs.project.dao.ContactDAO;
+import com.amdocs.project.dao.impl.ContactDAOIMPL;
+import com.amdocs.project.model.Contact;
 
 @WebServlet("/contact")
 public class ContactController extends HttpServlet {
@@ -26,10 +26,10 @@ public class ContactController extends HttpServlet {
 		String email=request.getParameter("email");
 		long phone = Long.parseLong(request.getParameter("phone"));
 		String message= request.getParameter("message");
-		int contact_ID= Integer.parseInt(request.getParameter("contactid"));
 		
-		ContactDAO dao = new ContactDAOImpl();
-		Contact contact = new Contact(user_ID,contact_ID,email, name, phone,message);
+		
+		ContactDAO dao = new ContactDAOIMPL();
+		Contact contact = new Contact(user_ID,name,email, phone,message);
 		
 		boolean status = dao.saveContact(contact);
 		

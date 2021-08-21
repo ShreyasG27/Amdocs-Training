@@ -1,0 +1,48 @@
+package com.amdocs.test;
+import com.amdocs.sampletest.*;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MathOperationsJUnitTest {
+	@BeforeEach
+	public void init()
+	{
+		operations= new MathOperations();
+	}
+
+	
+	
+	@Test
+	public void test_add_success()
+	{
+		assertEquals(6,operations.sum(2,4));
+	}
+	@Test
+	public void test_diff_success()
+	{
+		assertEquals(5,operations.diff(20,15));
+	}
+	@Test
+	public void test_prod_success()
+	{
+		assertEquals(8,operations.prod(2,4));
+	}
+	@Test
+	public void test_div_success()
+	{
+		assertEquals(2,operations.div(4,2));
+	}
+	@Test
+	public void test_evenodd_success()
+	{
+		assertEquals("Even",operations.checkOddEven(8));
+	}
+	@Test
+	public void test_prime_success()
+	{
+		assertEquals(false,operations.isPrime(8));
+	}
+	
+}

@@ -1,0 +1,48 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from MathOperationsService WSDL service -->
+
+  <service name="MathOperations" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://sample.amdocs.com"/>
+      <parameter name="wsdlServiceElement" value="MathOperationsService"/>
+      <parameter name="schemaQualified" value="http://sample.amdocs.com"/>
+      <parameter name="wsdlServicePort" value="MathOperations"/>
+      <parameter name="className" value="com.amdocs.sample.MathOperationsSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="MathOperations"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="sum" qname="operNS:sum" xmlns:operNS="http://sample.amdocs.com" returnQName="retNS:sumReturn" xmlns:retNS="http://sample.amdocs.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:firstnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:secondnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="diff" qname="operNS:diff" xmlns:operNS="http://sample.amdocs.com" returnQName="retNS:diffReturn" xmlns:retNS="http://sample.amdocs.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:firstnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:secondnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="isPrime" qname="operNS:isPrime" xmlns:operNS="http://sample.amdocs.com" returnQName="retNS:isPrimeReturn" xmlns:retNS="http://sample.amdocs.com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:num" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="prod" qname="operNS:prod" xmlns:operNS="http://sample.amdocs.com" returnQName="retNS:prodReturn" xmlns:retNS="http://sample.amdocs.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:firstnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:secondnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="div" qname="operNS:div" xmlns:operNS="http://sample.amdocs.com" returnQName="retNS:divReturn" xmlns:retNS="http://sample.amdocs.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:firstnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:secondnum" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="checkOddEven" qname="operNS:checkOddEven" xmlns:operNS="http://sample.amdocs.com" returnQName="retNS:checkOddEvenReturn" xmlns:retNS="http://sample.amdocs.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:num" xmlns:pns="http://sample.amdocs.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="div prod sum diff checkOddEven isPrime"/>
+
+  </service>
+</deployment>

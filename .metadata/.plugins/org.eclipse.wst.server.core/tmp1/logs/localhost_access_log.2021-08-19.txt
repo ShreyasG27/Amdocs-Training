@@ -1,0 +1,7 @@
+127.0.0.1 - - [19/Aug/2021:02:57:18 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Aug/2021:02:57:20 +0530] "GET /elearning-frontend/ HTTP/1.1" 200 351
+0:0:0:0:0:0:0:1 - - [19/Aug/2021:02:57:41 +0530] "GET /elearning-frontend/ HTTP/1.1" 200 351
+0:0:0:0:0:0:0:1 - - [19/Aug/2021:02:57:41 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [19/Aug/2021:02:57:46 +0530] "GET /elearning-frontend/register.jsp HTTP/1.1" 200 771
+0:0:0:0:0:0:0:1 - - [19/Aug/2021:03:00:31 +0530] "POST /elearning-frontend/register HTTP/1.1" 200 25
+0:0:0:0:0:0:0:1 - - [19/Aug/2021:03:01:16 +0530] "GET /elearning-frontend/course.jsp HTTP/1.1" 200 749

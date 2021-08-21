@@ -1,0 +1,17 @@
+package com.amdocs.test;
+import com.amdocs.sampletest.*;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MathOperationsJUnitTest {
+
+	MathOperations operations= new MathOperations();
+	
+	@Test
+	public void test_add_success()
+	{
+		assertEquals(6,operations.sum(2,4));
+	}
+}

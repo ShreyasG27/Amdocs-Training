@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.amdocs.training.dao.FeedbackDAO;
-import com.amdocs.training.dao.impl.FeedbackDAOImpl;
-import com.amdocs.training.model.Feedback;
+import com.amdocs.project.dao.FeedbackDAO;
+import com.amdocs.project.dao.impl.FeedbackDAOIMPL;
+import com.amdocs.project.model.Feedback;
 
 @WebServlet("/feedback")
 public class FeedbackController extends HttpServlet {
@@ -19,23 +19,28 @@ public class FeedbackController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		PrintWriter out = response.getWriter();
 		
-		int feedback_ID= Integer.parseInt(request.getParameter("fid"));
+		
 		int user_ID = Integer.parseInt(request.getParameter("userid"));
 		String name = request.getParameter("name");
 		String email=request.getParameter("email");
 		String feedbackmsg= request.getParameter("feedbackmsg");
 		
 		
-		FeedbackDAO dao = new FeedbackDAOImpl();
-		Feedback feedback = new Feedback(feedback_ID, user_ID, name,email, feedbackmsg );
+		FeedbackDAO dao = new FeedbackDAOIMPL();
+		Feedback feedback = new Feedback( user_ID, name,email, feedbackmsg );
 		
 		boolean status = dao.saveFeedback(feedback);
 		
 		if(status)
-			out.println("Feedback Saved Successfully");
+			System.out.println("Feedback Saved Successfully");
+			
 		else
-			out.println("Try Again");
+		{
+			System.out.println("Try Again");
+		}
 	}
+	
 }

@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.amdocs.training.dao.UserDAO;
-import com.amdocs.training.dao.impl.UserDAOImpl;
-import com.amdocs.training.model.User;
+import com.amdocs.project.dao.UserDAO;
+import com.amdocs.project.dao.impl.UserDAOIMPL;
+import com.amdocs.project.model.User;
 
 @WebServlet("/register")
 public class RegistrationController extends HttpServlet {
@@ -30,8 +30,8 @@ public class RegistrationController extends HttpServlet {
 		String upload_Image= request.getParameter("image");
 		String date=request.getParameter("date");
 		
-		UserDAO dao = new UserDAOImpl();
-		User user = new User(user_ID, name,email,password, address, phone,upload_Image,date);
+		UserDAO dao = new UserDAOIMPL();
+		User user = new User(name, email, password, address, phone, upload_Image, user_ID, date);
 		
 		boolean status = dao.saveUser(user);
 		

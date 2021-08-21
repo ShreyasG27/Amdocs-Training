@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.amdocs.training.dao.CourseDAO;
-import com.amdocs.training.dao.impl.CourseDAOImpl;
-import com.amdocs.training.model.Course;
+import com.amdocs.project.dao.CourseDAO;
+import com.amdocs.project.dao.impl.CourseDAOIMPL;
+import com.amdocs.project.model.Course;
 
 @WebServlet("/course")
 public class CourseController extends HttpServlet {
@@ -27,8 +27,8 @@ public class CourseController extends HttpServlet {
 		int coursefee = Integer.parseInt(request.getParameter("course_fees"));
 		String coursedesc= request.getParameter("coursedesc");
 		
-		CourseDAO dao = new CourseDAOImpl();
-		Course course = new Course( coursename,course_ID,courseres,coursedesc,coursefee);
+		CourseDAO dao = new CourseDAOIMPL();
+		Course course = new Course( coursename,courseres,coursedesc,coursefee);
 		
 		boolean status = dao.saveCourse(course);
 		
