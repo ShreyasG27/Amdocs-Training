@@ -85,17 +85,19 @@ public class AdminDAOIMPL implements AdminDAO {
 
     @Override
     public boolean delete(int adminid) {
-        String query="delete from admin where admin_id=?";
-        try{
-            PreparedStatement ps= conn.prepareStatement(query);
-            ps.setInt(1,adminid);
-            ps.executeUpdate();
-            return true;
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-        return false;
+    	 String query="delete from admin where admin_id=?";
+         try{
+             PreparedStatement ps= conn.prepareStatement(query);
+             ps.setInt(1,adminid);
+             ps.executeUpdate();
+             
+             
+             return true;
+         }
+         catch (SQLException e){
+             e.printStackTrace();
+         }
+         return false;
     }
 
 

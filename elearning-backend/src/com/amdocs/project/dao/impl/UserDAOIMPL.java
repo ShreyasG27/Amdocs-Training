@@ -90,14 +90,19 @@ public class UserDAOIMPL implements UserDAO {
          }
          return stat;
     }
+    
+   
 
     @Override
     public boolean delete(int userid) {
-        String query="delete from admin where admin_id=?";
+    	
+        String query="delete from user1 where user_id=?";
         try{
             PreparedStatement ps= conn.prepareStatement(query);
             ps.setInt(1,userid);
             ps.executeUpdate();
+            
+            
             return true;
         }
         catch (SQLException e){

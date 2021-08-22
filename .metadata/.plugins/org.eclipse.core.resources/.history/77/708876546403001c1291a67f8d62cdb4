@@ -1,0 +1,58 @@
+package com.amdocs.training.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.amdocs.project.dao.ContactDAO;
+import com.amdocs.project.dao.impl.ContactDAOIMPL;
+import com.amdocs.project.model.Contact;
+
+import com.amdocs.project.dao.UserDAO;
+import com.amdocs.project.dao.impl.UserDAOIMPL;
+import com.amdocs.project.model.User;
+
+@WebServlet("/contact")
+public class ContactController extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+		
+		int user_ID = Integer.parseInt(request.getParameter("userid"));
+		String name = request.getParameter("name");
+		String email=request.getParameter("email");
+		long phone = Long.parseLong(request.getParameter("phone"));
+		String message= request.getParameter("message");
+		
+		UserDAO dao1= new UserDAOIMPL();
+		User user= new User(user_ID,name,email,phone);
+		
+		boolean stat= dao1.loginUser(user);
+		
+		if(stat)
+		{
+			ContactDAO dao = new ContactDAOIMPL();
+			Contact contact = new Contact(user_ID,name,email, phone,message);
+		
+			boolean status = dao.saveContact(contact);
+		
+			if(status)
+				out.println("Contact Saved Successfully");
+			else
+				out.println("Try Again");
+		}
+		else {
+			String someMessage = "Contact Couldn't be Saved as User was not Registered!! To Register click on the below Link!!";
+			out.print("<html><head>");
+			out.print("<script type=\"text/javascript\">alert("+ someMessage + ");</script>");
+			out.print("</head><body></body></html>");
+		}
+	}
+}

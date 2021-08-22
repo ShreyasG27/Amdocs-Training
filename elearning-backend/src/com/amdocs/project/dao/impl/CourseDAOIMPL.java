@@ -66,17 +66,20 @@ public class CourseDAOIMPL implements CourseDAO {
 
     @Override
     public boolean delete(int courseid) {
-        String query="delete from admin where admin_id=?";
-        try{
-            PreparedStatement ps= conn.prepareStatement(query);
-            ps.setInt(1,courseid);
-            ps.executeUpdate();
-            return true;
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-        return false;
+    	
+    	 String query="delete from course where course_id=?";
+         try{
+             PreparedStatement ps= conn.prepareStatement(query);
+             ps.setInt(1,courseid);
+             ps.executeUpdate();
+             
+             
+             return true;
+         }
+         catch (SQLException e){
+             e.printStackTrace();
+         }
+         return false;
     }
 }
 

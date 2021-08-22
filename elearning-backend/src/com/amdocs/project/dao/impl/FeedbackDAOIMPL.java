@@ -65,16 +65,18 @@ public class FeedbackDAOIMPL implements FeedbackDAO {
 
     @Override
     public boolean delete(int feedbackid) {
-        String query="delete from admin where admin_id=?";
-        try{
-            PreparedStatement ps= conn.prepareStatement(query);
-            ps.setInt(1,feedbackid);
-            ps.executeUpdate();
-            return true;
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-        return false;
+    	 String query="delete from feedback where f_id=?";
+         try{
+             PreparedStatement ps= conn.prepareStatement(query);
+             ps.setInt(1,feedbackid);
+             ps.executeUpdate();
+             
+             
+             return true;
+         }
+         catch (SQLException e){
+             e.printStackTrace();
+         }
+         return false;
     }
 }

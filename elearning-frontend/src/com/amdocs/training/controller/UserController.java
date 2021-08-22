@@ -13,6 +13,7 @@ import com.amdocs.project.dao.UserDAO;
 import com.amdocs.project.dao.impl.UserDAOIMPL;
 import com.amdocs.project.model.User;
 
+
 @WebServlet("/loginuser")
 public class UserController extends HttpServlet {
 
@@ -22,6 +23,7 @@ public class UserController extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
+		
 		String email=request.getParameter("email");
 		String password= request.getParameter("password");
 		
@@ -30,6 +32,9 @@ public class UserController extends HttpServlet {
 		UserDAO dao = new UserDAOIMPL();
 		User user = new User(email,password);
 		
+		UserDAO dao1 = new UserDAOIMPL();
+		
+		
 		boolean status = dao.loginUser(user);
 		
 		if(status)
@@ -37,9 +42,12 @@ public class UserController extends HttpServlet {
 			
 		else
 		{	
-			response.sendRedirect("loginuser.jsp");
-			System.out.println("Try Again");
+			
+			out.println("Not a Registered User... Please Register");
+			response.sendRedirect("invalidlogin.jsp");
 		}
+		
+	
 	}
 	
 }

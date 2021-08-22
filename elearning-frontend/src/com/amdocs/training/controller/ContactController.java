@@ -21,6 +21,7 @@ public class ContactController extends HttpServlet {
 			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		
+		int contact_ID=Integer.parseInt(request.getParameter("contactid"));
 		int user_ID = Integer.parseInt(request.getParameter("userid"));
 		String name = request.getParameter("name");
 		String email=request.getParameter("email");
@@ -31,11 +32,22 @@ public class ContactController extends HttpServlet {
 		ContactDAO dao = new ContactDAOIMPL();
 		Contact contact = new Contact(user_ID,name,email, phone,message);
 		
+		ContactDAO dao1 = new ContactDAOIMPL();
 		boolean status = dao.saveContact(contact);
 		
 		if(status)
 			out.println("Contact Saved Successfully");
 		else
 			out.println("Try Again");
+		
+		
+		boolean stat= dao1.delete(contact_ID);
+		if(stat)
+		{
+			response.sendRedirect("contactdisplay.jsp");
+		}
+		else {
+			out.println("Contact could not be deleted!! Try Again!");
+		}
 	}
 }

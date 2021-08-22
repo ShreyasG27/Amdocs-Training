@@ -69,16 +69,18 @@ public class ContactDAOIMPL implements ContactDAO {
 
     @Override
     public boolean delete(int contactid) {
-        String query="delete from admin where admin_id=?";
-        try{
-            PreparedStatement ps= conn.prepareStatement(query);
-            ps.setInt(1,contactid);
-            ps.executeUpdate();
-            return true;
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-        return false;
+    	 String query="delete from contact where contact_id=?";
+         try{
+             PreparedStatement ps= conn.prepareStatement(query);
+             ps.setInt(1,contactid);
+             ps.executeUpdate();
+             
+             
+             return true;
+         }
+         catch (SQLException e){
+             e.printStackTrace();
+         }
+         return false;
     }
 }

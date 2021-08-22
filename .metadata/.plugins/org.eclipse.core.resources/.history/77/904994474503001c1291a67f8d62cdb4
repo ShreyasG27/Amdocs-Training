@@ -1,0 +1,67 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>eLearning Online Portal</title>
+<style>
+.signinbutton{
+	margin-left:320px;
+	padding:10px;
+	font-size:15px;
+	color: midnightblue;
+	background-color:lightblue;
+	border-radius:5px;
+	margin-top: 20px;
+}
+.signinbutton:hover{
+	margin-left:320px;
+	padding:10px;
+	font-size:15px;
+	color: midnightblue;
+	background-color:cyan;
+	border-radius:5px;
+}
+.userbutton{
+	margin-left:320px;
+	padding:10px;
+	font-size:15px;
+	color: midnightblue;
+	background-color:lightblue;
+	border-radius:5px;
+}
+.userbutton:hover{
+	margin-left:320px;
+	padding:10px;
+	font-size:15px;
+	color: midnightblue;
+	background-color:cyan;
+	border-radius:5px;
+}
+.registerbutton{
+	margin-left:290px;
+	padding:10px;
+	font-size:15px;
+	color: midnightblue;
+	background-color:lightblue;
+	border-radius:5px;
+}
+.registerbutton:hover{
+	margin-left:290px;
+	padding:10px;
+	font-size:15px;
+	color: midnightblue;
+	background-color:cyan;
+	border-radius:5px;
+}
+</style>
+</head>
+<body>
+<center><h2>Welcome to E Learning Online Portal</h2></center>
+
+<button class="registerbutton"><a href="register.jsp">New User? Sign Up</a></button><br>
+<button class="userbutton"><a href="loginuser.jsp">User Login</a></button><br>
+<button class="signinbutton"><a href="loginadmin.jsp">Admin Login</a></button><br>
+</body>
+</html>

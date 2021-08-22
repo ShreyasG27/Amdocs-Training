@@ -8,6 +8,11 @@ public class Course {
     private int Course_Fee;
 
     private Course(){}
+    
+    public Course(int course_ID)
+    {
+    	Course_ID=course_ID;
+    }
 
     public Course(String course_name, String course_Resource, String course_Desc, int course_Fee) {
         Course_name = course_name;

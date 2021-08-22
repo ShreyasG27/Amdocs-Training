@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>eLearning Online Portal</title>
+<style>
+.signinbutton{
+	margin-top: 20px;
+	background-color: lightblue;
+	border-radius: 5px;
+	margin-left: 250px;
+}
+.registerbutton{
+	margin-left:270px;
+	padding:20px;
+	font-size:15px;
+	color: midnightblue;
+}
+</style>
+</head>
+<body>
+<center><h2>Welcome to E Learning Online Portal</h2></center>
+
+<button class="registerbutton"><a href="register.jsp">New User? Sign Up</a></button><br>
+<button class="signinbutton"><a href="loginuser.jsp">Sign in as User</a></button><br>
+<button class="signinbutton"><a href="loginadmin.jsp">Sign in as administrator</a></button><br>
+</body>
+</html>

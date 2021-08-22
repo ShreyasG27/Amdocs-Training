@@ -30,14 +30,22 @@ public class RegistrationController extends HttpServlet {
 		String upload_Image= request.getParameter("image");
 		String date=request.getParameter("date");
 		
+
 		UserDAO dao = new UserDAOIMPL();
 		User user = new User(name, email, password, address, phone, upload_Image, user_ID, date);
 		
 		boolean status = dao.saveUser(user);
 		
 		if(status)
+		{
 			out.println("User Saved Successfully");
-		else
+			response.sendRedirect("loginuser.jsp");
+		}
+			
+			
+		else {
 			out.println("Try Again");
+		}
 	}
+	
 }

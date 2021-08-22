@@ -5,16 +5,64 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>User Login</title>
+<style>
+body{
+	background-image: radial-gradient(#33B7FF,#5633ff);
+	color: white;
+	height: 100vh;
+}
+.heading{
+font-size:40px;
+margin-top: 50px;
+}
+.submitbutton{
+	margin-left:465px;
+	padding:8px;
+	font-size:20px;
+	color: midnightblue;
+	background-color:lightblue;
+	border-radius:5px;
+	margin-top: 20px;
+}
+.submitbutton:hover{
+	margin-left:465px;
+	padding:8px;
+	font-size:20px;
+	color: midnightblue;
+	background-color:cyan;
+	border-radius:5px;
+	margin-top: 20px;
+}
+.inputfld{
+	margin-left: 435px;
+	padding: 5px;
+	broder-radius:10px;
+	font-size:12px;
+	width:30%;
+}
+.inputfld1{
+	margin-left: 435px;
+	padding: 5px;
+	broder-radius:10px;
+	font-size:12px;
+	width:30%;
+}
+
+.txtfld{
+	font-size:20px;
+	margin-left:445px;
+}
+</style>
 </head>
 <body>
-<h2>Login as User</h2>
-<hr>
+<center><p class="heading">User Login</p></center>
+
 <form action="loginuser" method="POST">
     <pre>
-    Email	 : <input type="email" name="email"><br>
-    Password : <input type="password" name="password"><br>
+    <p class="txtfld">Email ID</p> <input class="inputfld" type="email" name="email">
+   <p class="txtfld">Password</p> <input class="inputfld1" type="password" name="password"><br>
     
-                <input type="submit" value="Login"><br>
+                <input class="submitbutton" type="submit" value="Login"><br>
     </pre>
 </form>
 </body>

@@ -22,7 +22,7 @@ public class FeedbackController extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		
+		int feedback_ID= Integer.parseInt(request.getParameter("feedbackid"));
 		int user_ID = Integer.parseInt(request.getParameter("userid"));
 		String name = request.getParameter("name");
 		String email=request.getParameter("email");
@@ -35,11 +35,11 @@ public class FeedbackController extends HttpServlet {
 		boolean status = dao.saveFeedback(feedback);
 		
 		if(status)
-			System.out.println("Feedback Saved Successfully");
+			out.println("Feedback Saved Successfully");
 			
 		else
 		{
-			System.out.println("Try Again");
+			out.println("Try Again");
 		}
 	}
 	

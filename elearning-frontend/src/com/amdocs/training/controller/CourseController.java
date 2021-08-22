@@ -30,11 +30,17 @@ public class CourseController extends HttpServlet {
 		CourseDAO dao = new CourseDAOIMPL();
 		Course course = new Course( coursename,courseres,coursedesc,coursefee);
 		
+		
+		
 		boolean status = dao.saveCourse(course);
 		
 		if(status)
 			out.println("Course Saved Successfully");
 		else
 			out.println("Try Again");
+		
+		
+	
 	}
 }
+

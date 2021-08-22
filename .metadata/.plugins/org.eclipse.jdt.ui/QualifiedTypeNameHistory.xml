@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="org.junit.jupiter.api.AfterAll"/>
 <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
 <fullyQualifiedTypeName name="com.amdocs.project.model.User"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>
