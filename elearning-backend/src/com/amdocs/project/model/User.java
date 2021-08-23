@@ -10,7 +10,7 @@ public class User {
     private long Phone;
     private String Upload_Image;
     private int User_ID;
-    private String date;
+    private String Date;
 
     private User(){}
     public User(String email, String password) {
@@ -26,7 +26,7 @@ public class User {
         Phone = phone;
         Upload_Image = upload_Image;
         User_ID = user_ID;
-        date = date;
+        Date = date;
     }
 
     public String getName() {
@@ -86,10 +86,10 @@ public class User {
     }
 
     public String getDate() {
-        return date;
+        return Date;
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.Date = date;
     }
 }

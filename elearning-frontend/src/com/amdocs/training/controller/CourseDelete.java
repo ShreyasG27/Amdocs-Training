@@ -32,7 +32,7 @@ public class CourseDelete extends HttpServlet {
 		
 		if(stat)
 		{
-			response.sendRedirect("coursedisp.jsp");
+			response.sendRedirect("course.jsp");
 		}
 		else {
 			out.println("Could not delete course!");

@@ -1,3 +1,2 @@
 #Tomcat publish data
-#Mon Aug 23 01:28:55 IST 2021
-org.eclipse.jst.j2ee.server\:sample-soap-app=WEB-INF/lib/sample-soap-app.jar
+#Mon Aug 23 09:18:06 IST 2021

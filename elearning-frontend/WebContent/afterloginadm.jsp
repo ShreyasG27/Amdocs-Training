@@ -93,17 +93,16 @@ li a:hover:not(.active) {
 <ul>
   <li><a class="active" href="afterloginadm.jsp">Home</a></li>
   <li><a href="course.jsp">Course</a></li>
-  <li><a href="coursedisp.jsp">Course Delete</a></li>
+  
   <li><a href="contactdisplay.jsp">Contact</a></li>
   <li><a href="userdisplay.jsp">User</a></li>
   <li><a href="feedbackdisplay.jsp">Feedback</a></li>
 </ul>
 
 <center><p class="heading">Welcome Admin!!</p></center>
-<center><p class="heading">For Adding a Course check out Course Tab</p></center>
-<center><p class="heading">For Deleting a Course check out Course Delete Tab</p></center>
-<center><p class="heading">For Deleting a Contact check out Contact Tab</p></center>
-<center><p class="heading">For Deleting a User check out User Tab</p></center>
-<center><p class="heading">For Deleting a Feedback that has been worked upon check out Feedback Tab</p></center>
+<center><p class="heading">For Updating Course check out Course Tab</p></center>
+<center><p class="heading">For Updating a Contact check out Contact Tab</p></center>
+<center><p class="heading">For Updating a User check out User Tab</p></center>
+<center><p class="heading">For Updating a Feedback that has been worked upon check out Feedback Tab</p></center>
 </body>
 </html>
