@@ -121,6 +121,7 @@ li a:hover:not(.active) {
   <li><a href="contactdisplay.jsp">Contact</a></li>
   <li><a href="userdisplay.jsp">User</a></li>
   <li><a href="feedbackdisplay.jsp">Feedback</a></li>
+  <li><a href="index.jsp" style="margin-left:700px;">Logout</a></li>
 </ul>
 <center><p class="heading">Add Course</p></center>
 <form action="course" method="POST">

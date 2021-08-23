@@ -94,6 +94,7 @@ li a:hover:not(.active) {
 <li><a class="active" href="afteruserlogin.jsp">Home</a></li>
   <li><a href="contact.jsp">Contact</a></li>
   <li><a href="feedback.jsp">Feedback</a></li>
+  <li><a href="index.jsp" style="margin-left:850px;">Logout</a></li>
 </ul>
 <center><p class="heading">Welcome User!!</p></center>
 <center><p class="heading">To update your contact details check the Contact tab.</p></center>
