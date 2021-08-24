@@ -4,6 +4,7 @@ import com.amdocs.project.dao.CourseDAO;
 import com.amdocs.project.db.DBUtils;
 import com.amdocs.project.model.Contact;
 import com.amdocs.project.model.Course;
+import com.amdocs.project.model.User;
 
 import java.sql.*;
 
@@ -100,5 +101,40 @@ public class CourseDAOIMPL implements CourseDAO {
 		}
 		return false;
 	}
+    
+    @Override
+    public boolean enrol(int userid, int courseid) {
+    	String insert = "insert into enrol values(?,?)";
+        try{
+            PreparedStatement ps= conn.prepareStatement(insert);
+           
+            ps.setInt(1,userid);
+            ps.setInt(2, courseid);
+            ps.executeUpdate();
+            return true;
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+     @Override
+     public boolean deleteEnrol(int userid, int courseid)
+     {
+    	 String query="delete from enrol where user_id=? and course_id=?";
+         try{
+             PreparedStatement ps= conn.prepareStatement(query);
+             ps.setInt(1, userid);
+             ps.setInt(2,courseid);
+             ps.executeUpdate();
+             
+             
+             return true;
+         }
+         catch (SQLException e){
+             e.printStackTrace();
+         }
+         return false; 
+     }
 }
 

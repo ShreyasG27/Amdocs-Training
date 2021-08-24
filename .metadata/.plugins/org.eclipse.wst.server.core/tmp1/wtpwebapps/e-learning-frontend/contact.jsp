@@ -93,6 +93,7 @@ li a:hover:not(.active) {
 <ul>
 <li><a href="afteruserlogin.jsp">Home</a></li>
   <li><a class="active" href="contact.jsp">Contact</a></li>
+  <li><a href="courseuser.jsp">Courses</a></li>
   <li><a href="feedback.jsp">Feedback</a></li>
   <li><a href="index.jsp" style="margin-left:850px;">Logout</a></li>
 </ul>

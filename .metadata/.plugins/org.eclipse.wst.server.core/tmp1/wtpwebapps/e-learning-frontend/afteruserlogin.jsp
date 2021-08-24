@@ -93,15 +93,16 @@ li a:hover:not(.active) {
 <ul>
 <li><a class="active" href="afteruserlogin.jsp">Home</a></li>
   <li><a href="contact.jsp">Contact</a></li>
+  <li><a href="courseuser.jsp">Courses</a></li>
   <li><a href="feedback.jsp">Feedback</a></li>
   <li><a href="index.jsp" style="margin-left:850px;">Logout</a></li>
 </ul>
 <center><p class="heading">Welcome User!!</p></center>
 <center><p class="heading">To update your contact details check the Contact tab.</p></center>
 <center><p class="heading">To give us a feedback , please check the Feedback Tab</p></center>
-
+<center><p class="heading">To update your details, enter all the details below.</p></center><br><br>
 <center><p class="heading">Update Users</p></center>
-<form action="userupdate" method="POST">
+<form action="userupdate1" method="POST">
     <pre>
     <p class="txtfld">User ID</p> <input class="inputfld1" type="number" name="userid">
     <p class="txtfld">Name</p> <input class="inputfld1" type="text" name="name">
