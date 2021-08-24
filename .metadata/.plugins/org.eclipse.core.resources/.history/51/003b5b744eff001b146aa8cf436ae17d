@@ -1,7 +1,0 @@
-package com.amdocs.training.controller;
-
-import javax.servlet.http.HttpServlet;
-
-public class WelcomeController extends HttpServlet {
-	
-}

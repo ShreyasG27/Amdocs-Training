@@ -56,12 +56,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.amdocs.training"/>
+			<item value="com.amdocs.project"/>
 			<item value="com.amdocs.training.e_learning_backend"/>
 		</list>
 		<list key="groupId">
 			<item value="com.amdocs.training"/>
+			<item value="com.amdocs.project"/>
 		</list>
 		<list key="artifactId">
+			<item value="e-learning-frontend"/>
 			<item value="e-learning-backend"/>
 		</list>
 		<list key="projectNameTemplate">
