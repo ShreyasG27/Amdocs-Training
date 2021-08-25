@@ -95,7 +95,7 @@ li a:hover:not(.active) {
   <li><a class="active" href="contact.jsp">Contact</a></li>
   <li><a href="courseuser.jsp">Courses</a></li>
   <li><a href="feedback.jsp">Feedback</a></li>
-  <li><a href="index.jsp" style="margin-left:850px;">Logout</a></li>
+  <li><a href="index.jsp" style="margin-left:800px;">Logout</a></li>
 </ul>
 <center><p class="heading">Please Submit your Contact Details Here</p></center>
 

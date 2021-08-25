@@ -36,7 +36,7 @@ margin-top: 50px;
 	margin-top: 20px;
 }
 .deletebutton{
-	margin-left:500px;
+	margin-left:480px;
 	padding:8px;
 	font-size:20px;
 	color: midnightblue;
@@ -45,7 +45,7 @@ margin-top: 50px;
 	margin-top: 20px;
 }
 .deletebutton:hover{
-	margin-left:500px;
+	margin-left:480px;
 	padding:8px;
 	font-size:20px;
 	color: midnightblue;
@@ -108,13 +108,11 @@ li a:hover:not(.active) {
   color: black;
 }
 .tableedit{
-	margin-left:370px;
+	margin-left:300px;
 	border-radius:5px;
 	background-color:white;
 }
-.tabledit{
-cellpaddingleft:
-}
+
 </style>
 </head>
 <body>
@@ -123,16 +121,16 @@ cellpaddingleft:
   <li><a href="contact.jsp">Contact</a></li>
   <li><a class="active" href="courseuser.jsp">Courses</a></li>
   <li><a href="feedback.jsp">Feedback</a></li>
-  <li><a href="index.jsp" style="margin-left:850px;">Logout</a></li>
+  <li><a href="index.jsp" style="margin-left:800px;">Logout</a></li>
 </ul>
-<center><p class="heading">Enroll for Course</p></center>
+<center><p class="heading">Enrol for Course</p></center>
 <form action="courseuser" method="POST">
     <pre>
     <p class="txtfld">User ID</p> <input class="inputfld" type="number" name="userid">
     <p class="txtfld">Course ID</p> <input class="inputfld" type="number" name="courseid">
    
     
-                <input class="submitbutton" type="submit" value="Submit Feedback"><br>
+                <input class="deletebutton" type="submit" value="Enrol"><br>
     </pre>
 </form>
 

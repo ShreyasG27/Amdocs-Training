@@ -108,7 +108,7 @@ li a:hover:not(.active) {
   color: black;
 }
 .tableedit{
-	margin-left:370px;
+	margin-left:300px;
 	border-radius:5px;
 	background-color:white;
 }
